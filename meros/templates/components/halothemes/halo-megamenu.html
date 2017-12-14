@@ -1,0 +1,269 @@
+
+<!-- @HaloMegaMenu Library -->
+--<script src="{{cdn '/assets/js/theme/halothemes/haloMegaMenu.js'}}" defer></script>
+<script>
+jQuery(document).ready(function($) {
+    /* Megamenu Settings */
+    // information at bottom categories with variable : bottomCates
+    //bottomCates: '<div class="own-text"><p>free shipping in the u.s. & internationally</p></div>'
+
+    //Mattresses(1) This block has been added by Moe to enable MegaMenu styling for the first item in the menu.
+                menuItem(1).HaloMegaMenu({
+					dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+					dropWidth: '660px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+					dropType: 'noImage',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+					imageAreaWidth: '',    // width of images area
+					cateAreaWidth: '100%',     // width of categories area
+					cateColumns: 3,           // columns of categories area - max 5 columns
+					// contents for images bottom (HTML supported)
+					/**EDITED BY Moe. IMAGES HAVE BEEN HIDDEN FROM THE MENU(CATEGORY 1 AND CATEGORY 5. OCT-23-2017**/
+					bottomCates: '<div class="bottom-images"><!--<a class="col-xs-6 cols-lg 6" href="/put-link-for-image/"><img src="//store-4ehuh.mybigcommerce.com/product_images/uploaded_images/megamenu-l2.png"></a><a class="col-xs-3 cols-lg 3" href="/put-link-for-image/"><img src="/product_images/uploaded_images/megamenu-s2.png"></a><a class="col-xs-3 cols-lg 3" href="/put-link-for-image/"><img src="/product_images/uploaded_images/megamenu-s2.png"></a>--></div>'
+				});
+    
+  /**menuItem(2).HaloMegaMenu({
+        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '700px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'noImage',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '',    // width of images area
+        cateAreaWidth: '100%',     // width of categories area
+        cateColumns: 3,           // columns of categories area - max 5 columns
+        addclass_special: 'position_image_right',
+        bottomCates: '<div class="bottom-images"><a href="/put-link-for-image/"><img src="/product_images/uploaded_images/image-menu-logo.png" class="HomeFeatureButtons"></a></div>'
+    });
+   **/
+    //Bedding:
+    menuItem(2).HaloMegaMenu({ 
+        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '700px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'noImage',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '',    // width of images area
+        cateAreaWidth: '100%',     // width of categories area
+        cateColumns: 3,           // columns of categories area - max 5 columns
+        addclass_special: 'position_image_right',
+        bottomCates: '<div class="bottom-images"><a href="/put-link-for-image/"><img src="/product_images/uploaded_images/image-menu-logo.png" class="HomeFeatureButtons"></a></div>'
+    });
+
+ //Furniture
+    menuItem(3).HaloMegaMenu({
+					dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+					dropWidth: '700px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+					dropType: 'noImage',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+					imageAreaWidth: '',    // width of images area
+					cateAreaWidth: '100%',     // width of categories area
+					cateColumns: 3,           // columns of categories area - max 5 columns
+					addclass_special: 'position_image_right',
+					/**The <div> below contains has been hidden until it's decided what image to use to replace the default MEROS button image. Moe **/
+					bottomCates: '<div style="display:none" class="bottom-images"><a href="/put-link-for-image/"><img src="/product_images/uploaded_images/meros-image-menu.png" class="HomeFeatureButtons"></a></div>'
+				});
+
+     /**menuItem(4).HaloMegaMenu({
+        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '996px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'imageRight',    // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '33%',    // width of images area
+        cateAreaWidth: '67%',     // width of categories area
+        cateColumns: 3,           // columns of categories area - max 5 columns
+        // contents for images column (HTML supported)
+        images: '<div class="right_img"><p><a href="/put-link-for-image/"><img src="/product_images/uploaded_images/megamenu-colright.png" /></a></p><p>Nullam aliquet destibulum augue non varius. Lorem an dan congue elitos. Duis tristique del ante nec aliquam. Praesent urna tellus laoreet an tellus.</p></div>'
+    });**/
+    
+     //Adjustable Beds
+menuItem(4).HaloMegaMenu({
+        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '900px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'imageTop',     // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '',     // width of images area
+        cateAreaWidth: '100%',    // width of categories area
+        cateColumns: 5,           // columns of categories area - max 5 columns
+        // contents for images column (HTML supported)
+        imagesTop: ['<a href="/idealbed-adjustable/"><img src="/product_images/uploaded_images/idealbed-adj.png"/></a>','<a href="/leggett-platt/"><img src="/product_images/uploaded_images/leggett-platt-adj.jpg"/></a>','<a href="/reverie/"><img src="/product_images/uploaded_images/reverie.png"/></a>','<a href="/serta-adjustable/"><img src="/product_images/uploaded_images/serta-mcii-base-hero-head-tilt-adj.png"/></a>','<a href="/beautyrest-adjustable/"><img src="/product_images/uploaded_images/beautyrest-adj.png" /></a>'
+					],
+        bottomCates: '<div class="image_brand"><div class="title"><label>Popular Brands</label><a href="/brands/">View All Brands</a></div><div class="Brand-Image"><ul><li class=""><a href="/idealbed-adjustable/"><img style="border:1px solid" src="https://cdn3.bigcommerce.com/s-rpzf45a/product_images/uploaded_images/idealbed-125x56.png"></a></li><li><a href="/serta-adjustable/"><img style="border:1px solid" src="https://cdn3.bigcommerce.com/s-rpzf45a/product_images/uploaded_images/serta125x56.png"></a></li><li><a href="/leggett-platt/"><img style="border:1px solid" src="https://cdn3.bigcommerce.com/s-rpzf45a/product_images/uploaded_images/leggett-and-platt125x56.png"></a></li><li><a href="/reverie/"><img style="border:1px solid" src="https://cdn3.bigcommerce.com/s-rpzf45a/product_images/uploaded_images/reverielogo125x56.png"></a></li><li><a href="/beautyrest-adjustable/"><img style="border:1px solid" src="https://cdn3.bigcommerce.com/s-rpzf45a/product_images/uploaded_images/beautyrest125x56.png"></a></li></ul></div></div>'
+});
+  
+	/**Adjustable Beds**/
+/**menuItem(4).HaloMegaMenu({ //Added by Moe.
+					dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+					dropWidth: '900px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+					dropType: 'imageTop',     // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+					imageAreaWidth: '',     // width of images area
+					cateAreaWidth: '100%',    // width of categories area
+					cateColumns: 5,           // columns of categories area - max 5 columns
+					// contents for images column (HTML supported)
+					imagesTop:['<a href="/idealbed-adjustable/"><img src="/product_images/uploaded_images/idealbed-adj.png"/></a>','<a href="/leggett-platt/"><img="/product_images/uploaded_images/leggett-platt-adj.jpg"/></a>','<a href="/reverie/"><img src="/product_images/uploaded_images/reverie.png"/></a>','<a href="/serta-motion-custom-ii-adjustable-bed-base/"><img src="/product_images/uploaded_images/serta-mcii-base-hero-head-tilt-adj.png"/></a>','<a href="/beautyrest-adjustable/"><img src="/product_images/uploaded_images/beautyrest-adj.png"/></a>'
+					],
+					
+        
+				bottomCates:'<div class="image_brand"><div class="title"><label>Popular Brands</label><a href="/brands/">View All Brands</a></div>
+					<div class="Brand-Image">
+					    <ul>
+					        <li class=""><a href="/idealbed/"><img src="/product_images/uploaded_images/idealbedlogo-125x56.png"></a></li>
+					        <li><a href="/leggett-platt/"><img src="/product_images/uploaded_images/legget-platt-125x56.png"></a></li>
+					        <li><a href="/reverie/"><img src="/product_images/uploaded_images/reverie-125x56.png"></a></li>
+					        <li><a href="/serta-adjustable/"><img src="/product_images/uploaded_images/serta-125x56.png"></a></li>
+					        <li><a href="/beautyrest-adjustable/"><img src="/product_images/uploaded_images/beautyrest-pl-125x56.png"></a></li>
+					        <li><a href="/simmons-beautysleep/"><img src="/product_images/uploaded_images/bs15-logo125x56.png"></a></li>
+					   </ul>
+			        </div>
+			    </div>'
+					
+					//<li><a href="/area-rugs/"><img src="/product_images/uploaded_images/bs15-logo125x56.png"></a></li>
+				});
+**/
+
+/**STYLING HAS BEEN REMOVED FROM MENU ITEM 5. OCT-23-2017    <---EDITED BY Moe**/
+//Mattress & Adjustable Sets.
+/**
+    menuItem(5).HaloMegaMenu({
+        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '1100px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'noImage',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '',    // width of images area
+        cateAreaWidth: '100%',     // width of categories area
+        cateColumns: 5,           // columns of categories area - max 5 columns
+        // contents for images bottom (HTML supported)
+        					
+
+        bottomCates: '<div class="bottom-images"><!--<a class="col-xs-6" href="/put-link-for-image/"><img src="/product_images/uploaded_images/megamenu-image-bottom-1.png"></a><a class="col-xs-3" href="/put-link-for-image/"><img src="/product_images/uploaded_images/megamenu-image-bottom-2.png"></a><a class="col-xs-3" href="/put-link-for-image/"><img src="/product_images/uploaded_images/megamenu-image-bottom-3.png"></a>--></div>'
+    });
+**/
+
+  menuItem(6).HaloMegaMenu({
+        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '700px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'noImage',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '',    // width of images area
+        cateAreaWidth: '100%',     // width of categories area
+        cateColumns: 3,           // columns of categories area - max 5 columns
+        addclass_special: 'position_image_right',
+        bottomCates: '<div class="bottom-images"><a href="/sale/"><img src="https://cdn3.bigcommerce.com/s-rpzf45a/product_images/uploaded_images/sale-banner-megamenu.jpg" class="HomeFeatureButtons"></a></div>'
+  }); 
+});
+</script>
+
+
+<!-- @HaloMegaMenu Library -->
+<!--<script src="{{cdn '/assets/js/theme/halothemes/haloMegaMenu.js'}}" defer></script>
+<script>
+jQuery(document).ready(function($) {
+    /* Megamenu Settings */
+    // information at bottom categories with variable : bottomCates
+    //bottomCates: '<div class="own-text"><p>free shipping in the u.s. & internationally</p></div>'
+
+
+//Mattresses(1) This block has been added by Moe to enable MegaMenu styling for the first item in the menu.
+                menuItem(1).HaloMegaMenu({
+					dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+					dropWidth: '660px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+					dropType: 'noImage',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+					imageAreaWidth: '',    // width of images area
+					cateAreaWidth: '100%',     // width of categories area
+					cateColumns: 3,           // columns of categories area - max 5 columns
+					// contents for images bottom (HTML supported)
+					bottomCates: '<div class="bottom-images"><a class="col-xs-6 cols-lg 6" href="/put-link-for-image/"><img src="//store-4ehuh.mybigcommerce.com/product_images/uploaded_images/megamenu-l2.png"></a><a class="col-xs-3 cols-lg 3" href="/put-link-for-image/"><img src="/product_images/uploaded_images/megamenu-s2.png"></a><a class="col-xs-3 cols-lg 3" href="/put-link-for-image/"><img src="/product_images/uploaded_images/megamenu-s2.png"></a></div>'
+				});
+				
+//Bedding:
+    menuItem(2).HaloMegaMenu({ 
+        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '700px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'noImage',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '',    // width of images area
+        cateAreaWidth: '100%',     // width of categories area
+        cateColumns: 3,           // columns of categories area - max 5 columns
+        addclass_special: 'position_image_right',
+        bottomCates: '<div class="bottom-images"><a href="/put-link-for-image/"><img src="/product_images/uploaded_images/image-menu-logo.png" class="HomeFeatureButtons"></a></div>'
+    });
+
+
+
+/*****
+    menuItem(4).HaloMegaMenu({ //Edited by Moe.
+        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '996px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'imageRight',    // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '33%',    // width of images area  
+        cateAreaWidth: '67%',     // width of categories area
+        cateColumns: 3,           // columns of categories area - max 5 columns
+        // contents for images column (HTML supported)
+        images: '<div class="right_img"><p><a href="/put-link-for-image/"><img src="/product_images/uploaded_images/megamenu-colright.png" /></a></p><p>Nullam aliquet destibulum augue non varius. Lorem an dan congue elitos. Duis tristique del ante nec aliquam. Praesent urna tellus laoreet an tellus.</p></div>'
+    });
+*****/
+
+
+/**Adjustable Beds**/
+menuItem(4).HaloMegaMenu({ //Added by Moe.
+					dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+					dropWidth: '900px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+					dropType: 'imageTop',     // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+					imageAreaWidth: '',     // width of images area
+					cateAreaWidth: '100%',    // width of categories area
+					cateColumns: 5,           // columns of categories area - max 5 columns
+					// contents for images column (HTML supported)
+					imagesTop:['<a href="/idealbed-adjustable/"><img src="/product_images/uploaded_images/idealbed-adj.png"/></a>','<a href="/leggett-platt/"><img="/product_images/uploaded_images/leggett-platt-adj.jpg"/></a>','<a href="/reverie/"><img src="/product_images/uploaded_images/reverie.png"/></a>','<a href="/serta-motion-custom-ii-adjustable-bed-base/"><img src="/product_images/uploaded_images/serta-mcii-base-hero-head-tilt-adj.png"/></a>','<a href="/beautyrest-adjustable/"><img src="/product_images/uploaded_images/beautyrest-adj.png"/></a>'
+					],
+					
+        /**Megamenu Bottom Brands Banner**/
+             
+				bottomCates:'<div class="image_brand"><div class="title"><label>Popular Brands</label><a href="/brands/">View All Brands</a></div>
+					<div class="Brand-Image">
+					    <ul>
+					        <li class=""><a href="/idealbed/"><img src="/product_images/uploaded_images/idealbedlogo-125x56.png"></a></li>
+					        <li><a href="/leggett-platt/"><img src="/product_images/uploaded_images/legget-platt-125x56.png"></a></li>
+					        <li><a href="/reverie/"><img src="/product_images/uploaded_images/reverie-125x56.png"></a></li>
+					        <li><a href="/serta-adjustable/"><img src="/product_images/uploaded_images/serta-125x56.png"></a></li>
+					        <li><a href="/beautyrest-adjustable/"><img src="/product_images/uploaded_images/beautyrest-pl-125x56.png"></a></li>
+					        <li><a href="/simmons-beautysleep/"><img src="/product_images/uploaded_images/bs15-logo125x56.png"></a></li>
+					   </ul>
+			        </div>
+			    </div>'
+					
+					//<li><a href="/area-rugs/"><img src="/product_images/uploaded_images/bs15-logo125x56.png"></a></li>
+				});
+				
+				/**
+    menuItem(3).HaloMegaMenu({
+        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '900px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'imageTop',     // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '',     // width of images area
+        cateAreaWidth: '100%',    // width of categories area
+        cateColumns: 4,           // columns of categories area - max 5 columns
+        // contents for images column (HTML supported)
+        imagesTop: ['<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-1.png"/></a>',
+            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-2.png"/></a>',
+            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-3.png"/></a>',
+            '<a href="#placeholder_link"><img src="/product_images/uploaded_images/image-menu-4.png"/></a>'
+        ],
+        bottomCates: '<div class="image_brand"><div class="title"><label>Popular Brands</label><a href="/brands/">View All Brands</a></div><div class="Brand-Image"><ul><li class=""><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-1.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-2.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-3.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-4.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-5.png"></a></li><li><a href="/area-rugs/"><img src="/product_images/uploaded_images/image-menu-brand-6.png"></a></li></ul></div></div>'
+    });
+    
+    **/
+    
+    //Furniture
+    menuItem(3).HaloMegaMenu({
+					dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+					dropWidth: '700px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+					dropType: 'noImage',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+					imageAreaWidth: '',    // width of images area
+					cateAreaWidth: '100%',     // width of categories area
+					cateColumns: 3,           // columns of categories area - max 5 columns
+					addclass_special: 'position_image_right',
+					bottomCates: '<div class="bottom-images"><a href="/put-link-for-image/"><img src="/product_images/uploaded_images/meros-image-menu.png" class="HomeFeatureButtons"></a></div>'
+				});
+
+    
+    //Mattress and Adjustable Sets.
+    menuItem(5).HaloMegaMenu({
+        dropAlign: 'left',   // Dropdown MegaMenu Alignment: left, right, center, fullWidth
+        dropWidth: '1100px',       // Width of Dropdown MegaMenu (if dropAlign: fullWidth => dropWidth auto set 100%)
+        dropType: 'noImage',   // Type of Dropdown MegaMenu content: imageLeft, imageRight, noImage
+        imageAreaWidth: '',    // width of images area
+        cateAreaWidth: '100%',     // width of categories area
+        cateColumns: 5,           // columns of categories area - max 5 columns
+        // contents for images bottom (HTML supported)
+        bottomCates: '<div class="bottom-images"><a class="col-xs-6" href="/put-link-for-image/"><img src="/product_images/uploaded_images/megamenu-image-bottom-1.png"></a><a class="col-xs-3" href="/put-link-for-image/"><img src="/product_images/uploaded_images/megamenu-image-bottom-2.png"></a><a class="col-xs-3" href="/put-link-for-image/"><img src="/product_images/uploaded_images/megamenu-image-bottom-3.png"></a></div>'
+    });
+});
+</script>
+-->

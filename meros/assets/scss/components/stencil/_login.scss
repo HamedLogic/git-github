@@ -1,0 +1,66 @@
+// =============================================================================
+// LOGIN (CSS)
+// =============================================================================
+
+
+.login-row {	
+	.panel-body,
+	.panel-header{
+		background:none;
+		padding:0;
+		margin:0;
+	}
+	.panel-header{
+		margin-bottom:10px;
+	}
+	.panel-title{
+		margin: 0;
+		padding:0;
+		font: 800 16px $fontFamily-headings;
+		text-transform:capitalize;
+		color: stencilColor('color-textLink--hover');
+	}
+}
+
+.login-form {
+    .form-actions {
+        text-align: left;
+		border:none!important;
+		padding-top:0!important;
+        input.btn, a.forgot-password {
+            display: inline-block;
+            vertical-align: middle;
+        }
+		a.forgot-password {
+			margin-left:30px;
+		}
+        input.btn{
+			height:52px;
+			line-height:29px;
+		}
+    }
+}
+
+.new-customer {
+	& > .panel{
+		background:stencilColor('color-background-body') - #090806;
+		padding:25px;
+		border-radius:4px;
+		-moz-border-radius:4px;
+	}
+}
+
+.new-customer-intro {
+    margin-bottom: 7px;
+}
+
+.new-customer-fact-list {
+	margin:0 0 20px 20px;
+	li{
+		padding:3px 0;
+	}
+}
+
+.new-customer-fact {
+    padding-left: spacing("half");
+}

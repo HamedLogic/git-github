@@ -1,0 +1,54 @@
+<nav class="navUser">
+    <ul>
+        <li id="trigger-mobile" class="visible-xs"></li>
+        {{> components/common/currency-selector}}
+        {{#if settings.phone_number}}
+        <li class="phone_number hidden-xs"><a href="tel:{{settings.phone_number}}"><span>{{settings.phone_number}}</span></a></li>
+        {{/if}}
+        <li class="custom-service hidden-xs"><a href="" title="Customer Service">Customer Service</a></li>
+        <li class="hidden-xs"><a href="/blog/" title="Blog">Blog</a></li>        
+        {{#if settings.gift_certificates_enabled}}
+        <li class="hidden-xs">
+            <a href="{{urls.gift_certificate.purchase}}"><span>{{lang 'common.gift_cert'}}</span></a>
+        </li>
+        {{/if}}
+        {{#if customer.store_credit.value '>' 0}}
+        <li class="my-account hidden-xs">
+            <a class="navUser-action--storeCredit" data-dropdown="storeCredit-dropdown" data-options="align:bottom" href="{{urls.cart}}">
+                <span class="navUser-action-divider">{{lang 'common.store_credit_overview' credit=customer.store_credit.formatted}}</span>
+            </a>
+            <div class="dropdown-menu" id="storeCredit-dropdown" data-dropdown-content aria-hidden="true">
+                <div class="triangle-with-shadow"></div>
+                {{{lang 'common.store_credit' store_credit=customer.store_credit.formatted}}}
+            </div>
+        </li>
+        {{/if}}
+        {{#if customer}}
+        <li id="accountDropdown" class="hidden-xs">
+            <a class="navUser-action has-dropdown" href="#" data-dropdown="accountSelection" aria-controls="accountSelection" aria-expanded="false"><span>{{lang 'common.account'}}</span><i class="fa fa-chevron-down"></i></a>
+            <ul class="dropdown-menu" id="accountSelection" data-dropdown-content aria-hidden="true" tabindex="-1">
+                <div class="triangle-with-shadow"></div>
+                <li><a href="{{urls.account.orders.all}}">{{lang 'account.nav.orders'}}</a></li>
+                {{#if settings.returns_enabled}}
+                <li><a href="{{urls.account.returns}}">{{lang 'account.nav.returns'}}</a></li>
+                {{/if}}
+                <li><a href="{{urls.account.inbox}}">{{lang 'account.mobile_nav.messages'}}</a></li>
+                <li><a href="{{urls.account.addresses}}">{{lang 'account.nav.addresses'}}</a></li>
+                <li><a href="{{urls.account.recent_items}}">{{lang 'account.nav.recently_viewed'}}</a></li>
+                <li><a href="{{urls.account.details}}">{{lang 'account.nav.settings'}}</a></li>
+            </ul>
+        </li>
+        <li class="hidden-xs">{{lang 'Welcome back,'}} <strong>{{customer.name}}</strong></li>
+        <li class="logged-out hidden-sm hidden-xs"><a href="{{urls.auth.logout}}"><span>{{lang 'common.logout'}}</span></a></li>
+        {{else}}
+        <li class="my-account hidden-xs hidden-sm"><a href="{{urls.account.index}}"><span>{{lang 'common.account'}}</span></a></li>
+        {{/if}}
+
+        {{#if customer}}
+        <li id="mobileAccountSidebar" class="hidden-md hidden-lg"><a data-effect="st-effect-2" class="navUser-action" href="#"><i class="fa fa-user"></i><span>{{lang 'common.account'}}</span></a></li>
+        {{else}}
+        <li id="mobileAccountSidebar" class="hidden-md hidden-lg"><a data-effect="st-effect-2" href="{{urls.account.index}}"><i class="fa fa-user"></i><span>{{lang 'common.account'}}</span></a></li>
+        {{/if}}
+        <li id="topcart-mobile" class="visible-xs"></li>
+    </ul>
+</nav>

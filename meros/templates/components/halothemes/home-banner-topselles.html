@@ -1,0 +1,32 @@
+<div class="home-banner-topselles">
+   <div class="row">
+   {{#if products.featured}}
+   <div class="col col-sm-4">
+      <a href="/simmons-beautyrest/" class="imgAnimation" title="Beautyrest Hybrid Sale">
+          <img src="https://cdn3.bigcommerce.com/s-rpzf45a/product_images/uploaded_images/br-silver-390x390.png" alt="Beautyrest Hybrid Sale">
+      </a>
+   </div>
+   <div class="col col-sm-4">
+       <!-- <a href="/adjustable-beds/" class="imgAnimation" title="Adjustable Supersale Tile">
+          <img src="https://cdn3.bigcommerce.com/s-rpzf45a/product_images/uploaded_images/adjustable-sale-tile-idealbed-2017-390x390.png" alt="Adjustable Supersale Tile" style="border: 1px solid grey"> 
+      </a>--><a href="/free-adjustable-bed-sale/" class="imgAnimation" title="Adjustable Supersale Tile">
+          <img src="https://cdn3.bigcommerce.com/s-rpzf45a/product_images/uploaded_images/free-base-banner-homepage-final.png" alt="Free Base Banner" style="border: 1px solid grey"> 
+      </a>
+   </div>
+   <div class="col col-sm-4">
+      {{> components/products/top products=products.featured columns=theme_settings.homepage_top_products_column_count}}
+   </div>
+   {{else}}      
+   <div class="col col-sm-6">
+      <a href="/simmons-beautyrest/" class="imgAnimation" title="Banner Info"></a>
+          <img src="https://cdn3.bigcommerce.com/s-rpzf45a/product_images/uploaded_images/br-silver-390x390.png" alt="Beautyrest Hybrid Sale">
+      </a>
+   </div>      
+   <div class="col col-sm-6">
+      <a href="/adjustable-beds/" class="imgAnimation" title="Banner Info">
+          <img src="https://cdn3.bigcommerce.com/s-rpzf45a/product_images/uploaded_images/adjustable-sale-tile-idealbed-2017-390x390.png" alt="Adjustable Supersale Tile" style="border: 1px solid grey">
+      </a>
+   </div>
+   {{/if}}
+   </div>
+</div>

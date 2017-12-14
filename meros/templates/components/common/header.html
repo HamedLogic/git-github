@@ -1,0 +1,111 @@
+<header class="header" role="banner">
+
+    <!--Begin Top Bar Promotion--> 
+    <div class="header-top hide" id="top-bar-promotion">
+        <div class="container">
+            <p class="text-center">
+                <i class="fa fa-bell"></i><span>Year-End Sale Event Srarts Now! Save Up To 70% Off!</span>
+                <a href="/sale/" class="link">Shop Now</a>
+            </p>
+        </div>
+        <a href="javascript:void(0)" class="close"><svg><use xlink:href="#icon-close"></use></svg></a>
+    </div>
+     <!--End Top Bar Promotion--> 
+
+    <div class="header-top">
+        <div class="row">
+            <div class="col-left hidden-xs hidden-sm col-sm-5">
+                <!--The line below has been commented out. Moe Oct 24 2017-->
+                
+                <p>Free Nationwide Shipping. No Minimum Purchase Required* <a href="#" title="Detail">Detail</a></p>
+            </div>
+            <div class="col-right col-sm-7">
+                {{> components/common/navigation}}
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="header-panel row">
+            <div class="header-first col-sm-3">
+                <div class="row">
+                    {{#if template_file '===' 'pages/home'}}
+                    <h1 class="header-logo col-sm-6">
+                    {{> components/common/store-logo}}
+                    </h1> {{else}}
+                    <div class="header-logo col-sm-6">
+                        {{> components/common/store-logo}}
+                    </div>
+                    {{/if}}
+                    <div class="navPages-container col-sm-6" id="menu" data-menu>
+                        <h4><a href="#" data-dropdown="dropNavigation" aria-controls="dropNavigation" aria-expanded="false">Categories<i class="fa fa-chevron-down"></i></a></h4>
+                        {{> components/common/navigation-menu}}
+                    </div>
+                    <div id="trigger-desktop">
+                        <div id="st-trigger-effects">
+                            <a data-effect="st-effect-1" href="javascript:void(0);"><svg><use xlink:href="#icon-trigger-bars" /></use></svg><svg><use xlink:href="#icon-close"></use></svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="quickSearch" class="col-sm-6">
+                {{> components/common/quick-search}}
+            </div>
+            <ul class="right-header-bottom col-sm-3 text-right">
+                {{#if settings.show_wishlist}}
+                <li class="wishlist-link hidden-xs hidden-sm">
+                    <a href="{{urls.account.wishlists.all}}">
+                    <i class="fa fa-heart-o"></i>{{lang 'account.nav.my_wish_lists'}}</a>
+                </li>
+                {{/if}}
+                {{#if settings.account_creation_enabled}}
+                {{#if customer}}
+                {{else}}
+                    <li class="login hidden-sm hidden-xs customer-login"><a href="javascript:void(0);" class="toggle-dropdown-login"><span>{{lang 'common.login'}}</span></a>
+                        <div id="dropdown-login">
+                            <h3>Login</h3>
+                            <form class="login-popup" id="loginForm" action="{{settings.secure_base_url}}/login.php?action=check_login" method="post" name="mainLoginForm">
+                                <fieldset class="form-fieldset">
+                                    <div class="form-field">
+                                        <input class="form-input" name="login_email" id="login_email" type="email" placeholder="Email address">
+                                    </div>
+                                    <div class="form-field">
+                                        <input class="form-input" id="login_pass" type="password" name="login_pass" placeholder="Password">
+                                    </div>
+                                    <p style="text-align: center;display: none;" id="popup-loading"><img src="{{cdn '/assets/img/vendor/jstree/throbber.gif'}}"></p>
+                                    <div class="form-actions">
+                                        <input type="submit" class="btn btn-alt" value="Login">
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <div class="separated-form">
+                                <a class="forgot-password" href="{{urls.auth.forgot_password}}">{{lang 'login.forgot_password' }}</a>
+                                <span>OR</span>
+                                <a href="{{urls.auth.create_account}}" class="btn btn-primary"><span>{{lang 'login.new_customer.create_account'}}</span></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sing_up hidden-sm hidden-xs"><a href="{{urls.auth.create_account}}"><span>{{lang 'common.sign_up'}}</span></a></li>
+                {{/if}}
+                {{/if}}
+                <li id="top-cart" class="top-cart hidden-xs">
+                    <div class="hl-top-cart">
+                        <a data-cart-preview href="javascript:void(0);" class="cart-item hidden-mobile">
+                            <i class="icon-cart"></i>
+                            <span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
+                        </a>
+                        <a href="/cart.php" class="cart-item hidden-pc">
+                            <i class="icon-cart"></i>
+                            <span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
+                        </a>
+                        <div id="cart-preview-dropdown">
+                            <div class="triangle-with-shadow"></div>
+                            <div class="cart-preview-inner">
+                                {{> components/common/cart-preview}}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>

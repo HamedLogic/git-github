@@ -1,0 +1,73 @@
+// =============================================================================
+// BRAND GRID (CSS)
+// =============================================================================
+
+
+// Brand grid view
+// -----------------------------------------------------------------------------
+//
+// 1. Re-set the font-size, as we're reducing it to 0 in the .brandGrid class.
+//
+// -----------------------------------------------------------------------------
+img.brand-logo-heading{
+    border: 1px solid #d0d0d0;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+.brandGrid {
+    @include u-listBullets("none");
+    @include grid-row($behavior: "nest");
+    font-size: 0; // 1
+    margin-bottom: spacing("single");
+
+    .brand {
+        display: inline-block;
+        font-size: fontSize("base"); // 1
+        vertical-align: top;
+		padding:0 15px 30px;
+        @include breakpoint("medium") {
+            width: grid-calc(3, $total-columns);
+        }
+		@media (max-width:767px){
+			width:33%;
+		}
+		@media (max-width:500px){
+			width:50%;
+		}
+		.card {
+			border:1px solid #e2e2e2;
+			margin:1px;
+		}
+        figure {
+			display:table;
+			padding:5px 0;
+			height:85px;
+			width:100%;
+			a{
+				display:table-cell;
+				vertical-align:middle;
+			}
+        }
+		.card-body{
+			padding:15px 0;
+			background:#f6f6f6;
+		}
+        // scss-lint:disable SelectorDepth, NestingDepth
+		.card-title {
+            text-align: center;
+            font-size: 11px;
+            letter-spacing: 0;
+            font-weight: 700;
+            font-family: $fontFamily-sans;
+			color:#646464;
+			text-transform:uppercase;
+        }
+		&:hover{
+			.card {
+				border:2px solid #000;
+				margin:0;
+			}
+		}
+    }
+}

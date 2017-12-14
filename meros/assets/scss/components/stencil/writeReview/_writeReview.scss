@@ -1,0 +1,31 @@
+// =============================================================================
+// WRITE A REVIEW (CSS)
+// =============================================================================
+.writeReview-productDetails {
+    @include breakpoint("medium") {
+        @include grid-column(6);
+    }
+    img {
+        margin-bottom: 30px;
+    }
+    .product-brand {
+        color: #58a1ef;
+        margin: 0 0 6px;
+    }
+    .product-title {
+        margin-top: 0;
+        text-transform: none;
+        font-size: 14px;
+        color: #000;
+        letter-spacing: 0;
+    }
+}
+
+.writeReview-form {
+    @include breakpoint("medium") {
+        @include grid-column(6);
+    }
+}
+.form-capcha{
+	margin-bottom:25px!important;
+}

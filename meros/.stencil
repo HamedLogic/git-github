@@ -1,0 +1,12 @@
+{
+  "normalStoreUrl": "http://sandboxfordealbeds.mybigcommerce.com",
+  "port": 3000,
+  "clientId": "nt7g6hdv9nm80uqz7gaohl4dq2jgdka",
+  "accessToken": "ri2j3rootp8cwsgni6jo9dp7j7yi15t",
+  "customLayouts": {
+    "brand": {},
+    "category": {},
+    "page": {},
+    "product": {}
+  }
+}

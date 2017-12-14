@@ -1,0 +1,180 @@
+// =============================================================================
+// COMPARE (CSS)
+// =============================================================================
+
+
+// Compare table layout
+// -----------------------------------------------------------------------------
+//
+// 1. Foundation Magellan plugin.
+//
+// -----------------------------------------------------------------------------
+
+.compareTable {
+    width: 100%;
+}
+
+.compareTable-row {
+    vertical-align: top;
+
+    + .compareTable-row {
+
+        // scss-lint:disable NestingDepth
+        .compareTable-heading,
+        .compareTable-item {
+            border-top: container("border");
+        }
+
+        .compareTable-heading:empty {
+            border-top: 0;
+        }
+    }
+}
+
+
+// Compare table headings
+// -----------------------------------------------------------------------------
+
+.compareTable-heading {
+    font-size: fontSize("smaller");
+    font-weight: fontWeight("bold");
+    padding: 30px 15px 40px;
+    position: relative;
+    text-align: right;
+    width: 0;
+	@media(min-width:992px){
+		width:25%;
+	}
+	@media(max-width:991px){
+		display:none;
+	}
+}
+
+.compareTable-headingText {
+    position: absolute;
+    top: spacing("base") + spacing("sixth");
+    white-space: nowrap;
+
+    @include breakpoint("medium") {
+        position: inherit;
+        top: inherit;
+    }
+}
+
+
+// Compare table item
+// -----------------------------------------------------------------------------
+
+.compareTable-item {
+    padding: 15px;
+	@media(min-width:992px){
+		padding:30px 15px 40px;
+	}
+}
+
+
+// Remove product
+// -----------------------------------------------------------------------------
+
+.compareTable-removeProduct {
+    height: spacing("single") + spacing("base");
+    position: absolute;
+    right:-10px;
+    top: -20px;
+    transition: background-color 0.15s ease;
+    width: spacing("single") + spacing("base");
+    text-align: center;
+	z-index:10;
+    .icon {
+        fill: stencilColor("icon-color");
+        height: spacing("single");
+        margin-top: spacing("third");
+        width: spacing("single");
+    }
+	&:hover{
+		.icon{
+			fill: stencilColor('color-other-textLink--hover');
+		}
+	}
+}
+
+
+// Compare product card
+// -----------------------------------------------------------------------------
+
+.compareTable-product {
+    font-weight: fontWeight("normal");
+    padding:20px 15px 15px;
+    .card-text{
+		margin-bottom: 10px;
+		overflow: hidden;
+		min-height: 18px;
+		a{
+			color:#a5a5a5;
+		}
+    }
+    .card-title {
+		margin-top: 0px;
+		margin-bottom: 12px;
+		font-size: fontSize("base");
+		font-family: $fontFamily-sans;
+		font-weight: 500;
+		color: stencilColor('card-title-color');
+		letter-spacing: 0;
+		line-height:18px;
+		a{
+			color: stencilColor('card-title-color');
+			&:hover{
+				color: stencilColor('card-title-color-hover');
+				text-decoration: none;
+			}
+		}
+		&:hover a {
+			color: stencilColor('card-title-color-hover');
+			text-decoration: none;
+		}
+    }
+    .card {
+        margin-bottom: 0;
+    }
+
+    .card-body {
+        min-height: spacing("single") * 4;
+        padding-top: spacing("base");
+    }
+    .price-section {
+		color: stencilColor('basic-price-color');
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 20px;
+		& .price--rrp {
+			color: stencilColor('retail-price-color');
+			margin-right: 5px;
+			& + span{
+				color: stencilColor('sale-price-color');
+			}
+		}
+    }
+}
+
+
+// Compare action
+// -----------------------------------------------------------------------------
+
+.compareTable-action {
+	padding:0 15px 40px;
+    .button {
+        display: block;
+        padding-left: spacing("half");
+        padding-right: spacing("half");
+        width: 100%;
+    }
+}
+@media(max-width:600px){
+	.compareTable-product,
+	.compareTable-action,
+	.compareTable-item{
+		display:block;
+		width:100%;
+	}
+}
